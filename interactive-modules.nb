@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    248860,       4777]
-NotebookOptionsPosition[    247021,       4733]
-NotebookOutlinePosition[    247527,       4751]
-CellTagsIndexPosition[    247484,       4748]
+NotebookDataLength[    250377,       4825]
+NotebookOptionsPosition[    248538,       4781]
+NotebookOutlinePosition[    249044,       4799]
+CellTagsIndexPosition[    249001,       4796]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1087,7 +1087,8 @@ Cell[BoxData[
    3.8691233219558887`*^9}, {3.869123367257497*^9, 3.869123378550036*^9}, {
    3.869126509334128*^9, 3.869126549970244*^9}, {3.8691265866868343`*^9, 
    3.869126588224111*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"517d5bcb-7972-4ef0-ab29-92906cc91c66"],
+ CellLabel->
+  "In[287]:=",ExpressionUUID->"517d5bcb-7972-4ef0-ab29-92906cc91c66"],
 
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`graph1$$ = 
@@ -1118,10 +1119,10 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[0.5, 0, 0.5], 2 -> 
                GrayLevel[1], 3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -8] == 0, 
-            AddTo[FE`number$$154, 2^7], 
+            AddTo[FE`number$$4256, 2^7], 
             If[Part[$CellContext`digits$$, -16] == 0, 
-             AddTo[FE`number$$154, 2^15 - 2^7], 
-             SubtractFrom[FE`number$$154, 2^15 + 2^7]]], 
+             AddTo[FE`number$$4256, 2^15 - 2^7], 
+             SubtractFrom[FE`number$$4256, 2^15 + 2^7]]], 
            ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}], 
@@ -1141,10 +1142,10 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[0.5, 0, 0.5], 2 -> 
                GrayLevel[1], 3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -7] == 0, 
-            AddTo[FE`number$$154, 2^6], 
+            AddTo[FE`number$$4256, 2^6], 
             If[Part[$CellContext`digits$$, -15] == 0, 
-             AddTo[FE`number$$154, 2^14 - 2^6], 
-             SubtractFrom[FE`number$$154, 2^14 + 2^6]]], 
+             AddTo[FE`number$$4256, 2^14 - 2^6], 
+             SubtractFrom[FE`number$$4256, 2^14 + 2^6]]], 
            ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}], 
@@ -1164,10 +1165,10 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[0.5, 0, 0.5], 2 -> 
                GrayLevel[1], 3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -6] == 0, 
-            AddTo[FE`number$$154, 2^5], 
+            AddTo[FE`number$$4256, 2^5], 
             If[Part[$CellContext`digits$$, -14] == 0, 
-             AddTo[FE`number$$154, 2^13 - 2^5], 
-             SubtractFrom[FE`number$$154, 2^13 + 2^5]]], 
+             AddTo[FE`number$$4256, 2^13 - 2^5], 
+             SubtractFrom[FE`number$$4256, 2^13 + 2^5]]], 
            ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}], 
@@ -1186,10 +1187,10 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[0.5, 0, 0.5], 2 -> 
                GrayLevel[1], 3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -5] == 0, 
-            AddTo[FE`number$$154, 2^4], 
+            AddTo[FE`number$$4256, 2^4], 
             If[Part[$CellContext`digits$$, -13] == 0, 
-             AddTo[FE`number$$154, 2^12 - 2^4], 
-             SubtractFrom[FE`number$$154, 2^12 + 2^4]]], 
+             AddTo[FE`number$$4256, 2^12 - 2^4], 
+             SubtractFrom[FE`number$$4256, 2^12 + 2^4]]], 
            ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}]}, {
@@ -1209,10 +1210,10 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[1, 0.5, 0], 2 -> GrayLevel[1], 
                3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -4] == 0, 
-            AddTo[FE`number$$154, 2^3], 
+            AddTo[FE`number$$4256, 2^3], 
             If[Part[$CellContext`digits$$, -12] == 0, 
-             AddTo[FE`number$$154, 2^11 - 2^3], 
-             SubtractFrom[FE`number$$154, 2^11 + 2^3]]], 
+             AddTo[FE`number$$4256, 2^11 - 2^3], 
+             SubtractFrom[FE`number$$4256, 2^11 + 2^3]]], 
            ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}], 
@@ -1232,10 +1233,10 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[1, 0.5, 0], 2 -> GrayLevel[1], 
                3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -3] == 0, 
-            AddTo[FE`number$$154, 2^2], 
+            AddTo[FE`number$$4256, 2^2], 
             If[Part[$CellContext`digits$$, -11] == 0, 
-             AddTo[FE`number$$154, 2^10 - 2^2], 
-             SubtractFrom[FE`number$$154, 2^10 + 2^2]]], 
+             AddTo[FE`number$$4256, 2^10 - 2^2], 
+             SubtractFrom[FE`number$$4256, 2^10 + 2^2]]], 
            ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}], 
@@ -1255,11 +1256,11 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[1, 0.5, 0], 2 -> GrayLevel[1], 
                3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -2] == 0, 
-            AddTo[FE`number$$154, 2^1], 
+            AddTo[FE`number$$4256, 2^1], 
             If[Part[$CellContext`digits$$, -10] == 0, 
-             AddTo[FE`number$$154, 2^9 - 2^1], 
-             SubtractFrom[FE`number$$154, 2^9 + 2^1]]], ImageSize -> {60, 60},
-            FrameMargins -> 0, Enabled -> True, 
+             AddTo[FE`number$$4256, 2^9 - 2^1], 
+             SubtractFrom[FE`number$$4256, 2^9 + 2^1]]], 
+           ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}], 
          Graph[{0, 1, 2, 3}, {Null, {{1, 2}, {1, 3}, {1, 4}}}, {
@@ -1278,11 +1279,11 @@ Cell[BoxData[
               1 -> GrayLevel[1], 0 -> RGBColor[1, 0.5, 0], 2 -> GrayLevel[1], 
                3 -> GrayLevel[1]}}], 
            If[Part[$CellContext`digits$$, -1] == 0, 
-            AddTo[FE`number$$154, 2^0], 
+            AddTo[FE`number$$4256, 2^0], 
             If[Part[$CellContext`digits$$, -9] == 0, 
-             AddTo[FE`number$$154, 2^8 - 2^0], 
-             SubtractFrom[FE`number$$154, 2^8 + 2^0]]], ImageSize -> {60, 60},
-            FrameMargins -> 0, Enabled -> True, 
+             AddTo[FE`number$$4256, 2^8 - 2^0], 
+             SubtractFrom[FE`number$$4256, 2^8 + 2^0]]], 
+           ImageSize -> {60, 60}, FrameMargins -> 0, Enabled -> True, 
            FrameMargins -> {{60, Automatic}, {Automatic, 70}}, 
            Alignment -> {0, -0.4}]}}, Spacings -> {1.5, 0.5}]}}, ItemSize -> 
     42]], $CellContext`color0$$ = RGBColor[1, 0.5, 0], $CellContext`color1$$ =
@@ -1591,9 +1592,11 @@ Cell[BoxData[
    3.869382245584865*^9, {3.8693865852249823`*^9, 3.869386592021196*^9}, 
    3.869386703811488*^9, 3.8693868277015057`*^9, 3.869387868249712*^9, 
    3.8693881680728073`*^9, 3.869388674620515*^9, 3.869388786776849*^9, 
-   3.870158249452346*^9, 3.8705109232034397`*^9},
+   3.870158249452346*^9, 3.8705109232034397`*^9, {3.870668452515441*^9, 
+   3.87066845380022*^9}},
  TextAlignment->Center,
- CellLabel->"Out[1]=",ExpressionUUID->"2ea2cd82-da34-4e2f-a3c6-b6f50a00ab20"]
+ CellLabel->
+  "Out[287]=",ExpressionUUID->"cd237b64-34b4-4948-ad23-7cc63dd913bf"]
 }, {2}]]
 }, Open  ]],
 
@@ -1817,7 +1820,8 @@ Cell[BoxData[
      RowBox[{"evolve", "[", 
       RowBox[{
        RowBox[{"{", 
-        RowBox[{"aM_", ",", "sV_"}], "}"}], ",", "rN_"}], "]"}], ":=", " ", 
+        RowBox[{"aM_", ",", "sV_"}], "}"}], ",", "rN_", ",", 
+       RowBox[{"it_", ":", "1"}]}], "]"}], ":=", 
      RowBox[{"Module", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -1838,7 +1842,7 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{"aM", ",", "sV"}], "}"}], ",", "rN"}], "]"}]}], ",", 
          "replicate", ",", "vertexNumber", ",", "state", ",", " ", "line", 
-         ",", " ", "ones", ",", "subMatrix"}], "}"}], ",", 
+         ",", " ", "ones", ",", "insert", ",", "subMatrix"}], "}"}], ",", 
        "\[IndentingNewLine]", "\[IndentingNewLine]", 
        RowBox[{"(*", "Function", "*)"}], "\[IndentingNewLine]", 
        RowBox[{
@@ -1884,47 +1888,54 @@ Cell[BoxData[
              "adjacency", " ", "matrix"}], "*)"}], "\t", 
            "\[IndentingNewLine]", 
            RowBox[{"line", " ", "=", " ", 
-            RowBox[{"Normal", "[", 
+            RowBox[{"Normal", "@", 
              RowBox[{"adjacencyMatrix", "[", 
-              RowBox[{"[", "vertexNumber", "]"}], "]"}], "]"}]}], ";", 
+              RowBox[{"[", "vertexNumber", "]"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"ones", " ", "=", " ", 
-            RowBox[{"Catenate", "[", 
+            RowBox[{"Catenate", "@", 
              RowBox[{"Position", "[", 
-              RowBox[{"line", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{"line", ",", "1"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"adjacencyMatrix", "=", 
             RowBox[{"Delete", "[", 
              RowBox[{"adjacencyMatrix", ",", "vertexNumber"}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"Block", "[", 
-            RowBox[{
-             RowBox[{"{", "i", "}"}], ",", 
-             RowBox[{"Do", "[", "\[IndentingNewLine]", 
-              RowBox[{
+           RowBox[{"insert", "=", 
+            RowBox[{"SparseArray", "[", 
+             RowBox[{
+              RowBox[{"{", 
                RowBox[{
-                RowBox[{"adjacencyMatrix", "=", 
-                 RowBox[{"Insert", "[", 
-                  RowBox[{"adjacencyMatrix", ",", 
-                   RowBox[{"Catenate", "[", 
-                    RowBox[{"ReplacePart", "[", 
-                    RowBox[{
-                    RowBox[{"ConstantArray", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}], 
-                    ",", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"ones", "[", 
-                    RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
-                    "]"}], "]"}], ",", "vertexNumber"}], "]"}]}], ";"}], 
-               "\[IndentingNewLine]", ",", 
-               RowBox[{"{", 
-                RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], 
-              "\[IndentingNewLine]", "]"}]}], "]"}], ";", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"3", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", 
+                RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}]}], ";",
+            "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"adjacencyMatrix", "=", 
+              RowBox[{"Insert", "[", 
+               RowBox[{"adjacencyMatrix", ",", 
+                RowBox[{"insert", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", "vertexNumber"}], 
+               "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], ";", 
            "\[IndentingNewLine]", "\[IndentingNewLine]", 
            RowBox[{"(*", "Transpose", "*)"}], "\[IndentingNewLine]", 
            RowBox[{"adjacencyMatrix", "=", 
@@ -1934,51 +1945,59 @@ Cell[BoxData[
             RowBox[{
             "Second", " ", "division", " ", "pass", " ", "on", " ", 
              "adjacency", " ", "matrix"}], "*)"}], "\[IndentingNewLine]", 
-           RowBox[{"line", " ", "=", 
-            RowBox[{"Normal", "[", " ", 
+           RowBox[{"line", " ", "=", " ", 
+            RowBox[{"Normal", "@", 
              RowBox[{"adjacencyMatrix", "[", 
-              RowBox[{"[", "vertexNumber", "]"}], "]"}], "]"}]}], ";", 
+              RowBox[{"[", "vertexNumber", "]"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"ones", " ", "=", " ", 
-            RowBox[{"Catenate", "[", 
+            RowBox[{"Catenate", "@", 
              RowBox[{"Position", "[", 
-              RowBox[{"line", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{"line", ",", "1"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"adjacencyMatrix", "=", 
             RowBox[{"Delete", "[", 
              RowBox[{"adjacencyMatrix", ",", "vertexNumber"}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"Block", "[", 
-            RowBox[{
-             RowBox[{"{", "i", "}"}], ",", 
-             RowBox[{"Do", "[", "\[IndentingNewLine]", 
-              RowBox[{
+           RowBox[{"insert", "=", 
+            RowBox[{"SparseArray", "[", 
+             RowBox[{
+              RowBox[{"{", 
                RowBox[{
-                RowBox[{"adjacencyMatrix", "=", 
-                 RowBox[{"Insert", "[", 
-                  RowBox[{"adjacencyMatrix", ",", 
-                   RowBox[{"Catenate", "[", 
-                    RowBox[{"ReplacePart", "[", 
-                    RowBox[{
-                    RowBox[{"ConstantArray", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}], 
-                    ",", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"ones", "[", 
-                    RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
-                    "]"}], "]"}], ",", "vertexNumber"}], "]"}]}], ";"}], 
-               "\[IndentingNewLine]", ",", 
-               RowBox[{"{", 
-                RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], 
-              "\[IndentingNewLine]", "]"}]}], "]"}], ";", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"3", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", 
+                RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}]}], ";",
+            "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"adjacencyMatrix", "=", 
+              RowBox[{"Insert", "[", 
+               RowBox[{"adjacencyMatrix", ",", 
+                RowBox[{"insert", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", "vertexNumber"}], 
+               "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], ";", 
            "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
            RowBox[{"(*", 
-            RowBox[{"adding", " ", "the", " ", "submatrix"}], "*)"}], 
+            RowBox[{"Adding", " ", "the", " ", "submatrix"}], "*)"}], 
            "\[IndentingNewLine]", 
            RowBox[{
             RowBox[{"adjacencyMatrix", "[", 
@@ -2188,14 +2207,15 @@ Cell[BoxData[
         "}"}], "]"}]}], "]"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.870508534948763*^9, 3.870508828746847*^9}, {
-  3.870508861337208*^9, 3.8705089328954363`*^9}, {3.870508980373809*^9, 
-  3.870509103518165*^9}, {3.870509145382848*^9, 3.87050919601167*^9}, {
-  3.870509226275463*^9, 3.8705092586675997`*^9}, {3.870509291858261*^9, 
-  3.87050931047705*^9}, {3.870509342391827*^9, 3.870509418640276*^9}, {
-  3.870509456821175*^9, 3.870509480150557*^9}, {3.870509512409349*^9, 
-  3.870509541710804*^9}, {3.870509644130185*^9, 3.870509773491928*^9}, {
-  3.87050981573783*^9, 3.870509829747181*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"84003cbe-3035-4bc0-a64c-158b387b9024"],
+   3.870508861337208*^9, 3.8705089328954363`*^9}, {3.870508980373809*^9, 
+   3.870509103518165*^9}, {3.870509145382848*^9, 3.87050919601167*^9}, {
+   3.870509226275463*^9, 3.8705092586675997`*^9}, {3.870509291858261*^9, 
+   3.87050931047705*^9}, {3.870509342391827*^9, 3.870509418640276*^9}, {
+   3.870509456821175*^9, 3.870509480150557*^9}, {3.870509512409349*^9, 
+   3.870509541710804*^9}, {3.870509644130185*^9, 3.870509773491928*^9}, {
+   3.87050981573783*^9, 3.870509829747181*^9}, 3.87066843419595*^9},
+ CellLabel->
+  "In[288]:=",ExpressionUUID->"84003cbe-3035-4bc0-a64c-158b387b9024"],
 
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`linearAlgebraToGraph$$, \
@@ -3677,7 +3697,10 @@ $CellContext`sV$}]]]}}, {DownValues[$CellContext`evolve$$] = {HoldPattern[
            Pattern[$CellContext`sV$, 
             Blank[]]}, 
           Pattern[$CellContext`rN$, 
-           Blank[]]]] :> 
+           Blank[]], 
+          Optional[
+           Pattern[$CellContext`it$, 
+            Blank[]], 1]]] :> 
        Module[{$CellContext`divisionVector = 
           Map[$CellContext`ruleDivision$$[$CellContext`rN$, #]& , 
             $CellContext`configurationVector$$[{$CellContext`aM$, \
@@ -3685,7 +3708,8 @@ $CellContext`sV$}]], $CellContext`adjacencyMatrix = $CellContext`aM$, \
 $CellContext`stateVector = $CellContext`newState$$[{$CellContext`aM$, \
 $CellContext`sV$}, $CellContext`rN$], $CellContext`replicate, \
 $CellContext`vertexNumber, $CellContext`state, $CellContext`line, \
-$CellContext`ones, $CellContext`subMatrix}, $CellContext`replicate[
+$CellContext`ones, $CellContext`insert, $CellContext`subMatrix}, \
+$CellContext`replicate[
             Pattern[$CellContext`v, 
              Blank[]], 
             Pattern[$CellContext`p, 
@@ -3707,38 +3731,38 @@ $CellContext`replicate[$CellContext`stateVector, $CellContext`vertexNumber,
               Part[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]]; \
 $CellContext`ones = Catenate[
               Position[$CellContext`line, 1]]; $CellContext`adjacencyMatrix = 
-            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; 
-           Block[{$CellContext`i}, 
-             
-             Do[$CellContext`adjacencyMatrix = 
-               Insert[$CellContext`adjacencyMatrix, 
-                 Catenate[
-                  ReplacePart[
-                   ConstantArray[0, {1, 
-                    Length[$CellContext`line]}], {1, 
-                    Part[$CellContext`ones, $CellContext`i]} -> 
-                   1]], $CellContext`vertexNumber]; 
-              Null, {$CellContext`i, 1, 3}]]; $CellContext`adjacencyMatrix = 
+            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; \
+$CellContext`insert = SparseArray[{{1, 
+                 Part[$CellContext`ones, 1]} -> 1, {2, 
+                 Part[$CellContext`ones, 2]} -> 1, {3, 
+                 Part[$CellContext`ones, 3]} -> 1}, {3, 
+               Length[$CellContext`line]}]; 
+           Do[$CellContext`adjacencyMatrix = 
+             Insert[$CellContext`adjacencyMatrix, 
+               
+               Part[$CellContext`insert, $CellContext`i], \
+$CellContext`vertexNumber], {$CellContext`i, 1, 
+              3}]; $CellContext`adjacencyMatrix = 
             Transpose[$CellContext`adjacencyMatrix]; $CellContext`line = 
             Normal[
               
               Part[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]]; \
 $CellContext`ones = Catenate[
               Position[$CellContext`line, 1]]; $CellContext`adjacencyMatrix = 
-            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; 
-           Block[{$CellContext`i}, 
-             
-             Do[$CellContext`adjacencyMatrix = 
-               Insert[$CellContext`adjacencyMatrix, 
-                 Catenate[
-                  ReplacePart[
-                   ConstantArray[0, {1, 
-                    Length[$CellContext`line]}], {1, 
-                    Part[$CellContext`ones, $CellContext`i]} -> 
-                   1]], $CellContext`vertexNumber]; 
-              Null, {$CellContext`i, 1, 3}]]; 
+            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; \
+$CellContext`insert = SparseArray[{{1, 
+                 Part[$CellContext`ones, 1]} -> 1, {2, 
+                 Part[$CellContext`ones, 2]} -> 1, {3, 
+                 Part[$CellContext`ones, 3]} -> 1}, {3, 
+               Length[$CellContext`line]}]; 
+           Do[$CellContext`adjacencyMatrix = 
+             Insert[$CellContext`adjacencyMatrix, 
+               
+               Part[$CellContext`insert, $CellContext`i], \
+$CellContext`vertexNumber], {$CellContext`i, 1, 3}]; 
            Part[$CellContext`adjacencyMatrix, 
               Span[$CellContext`vertexNumber, $CellContext`vertexNumber + 2], 
+              
               
               Span[$CellContext`vertexNumber, $CellContext`vertexNumber + 
                2]] = {{0, 1, 1}, {1, 0, 1}, {1, 1, 
@@ -3784,9 +3808,11 @@ $CellContext`maxTime$]; Return[$CellContext`inList$]; Null]}}}]], "Output",
    3.87050964506126*^9, 3.8705096817686996`*^9, 3.8705097337677517`*^9, {
    3.870509770540269*^9, 3.870509774003285*^9}, {3.870509820521385*^9, 
    3.870509830238785*^9}, {3.870510924138977*^9, 3.8705109243428917`*^9}, {
-   3.8705133737639217`*^9, 3.870513380194182*^9}},
+   3.8705133737639217`*^9, 3.870513380194182*^9}, {3.870668453187706*^9, 
+   3.8706684542080193`*^9}},
  TextAlignment->Center,
- CellLabel->"Out[4]=",ExpressionUUID->"cfc78123-1e33-43e8-9b68-b4f1adbc829f"]
+ CellLabel->
+  "Out[288]=",ExpressionUUID->"1f92f9c0-4e3b-4c74-b29a-bfc6001b85d5"]
 }, {2}]]
 }, Open  ]],
 
@@ -4010,7 +4036,8 @@ Cell[BoxData[
      RowBox[{"evolve", "[", 
       RowBox[{
        RowBox[{"{", 
-        RowBox[{"aM_", ",", "sV_"}], "}"}], ",", "rN_"}], "]"}], ":=", " ", 
+        RowBox[{"aM_", ",", "sV_"}], "}"}], ",", "rN_", ",", 
+       RowBox[{"it_", ":", "1"}]}], "]"}], ":=", 
      RowBox[{"Module", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -4031,7 +4058,7 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{"aM", ",", "sV"}], "}"}], ",", "rN"}], "]"}]}], ",", 
          "replicate", ",", "vertexNumber", ",", "state", ",", " ", "line", 
-         ",", " ", "ones", ",", "subMatrix"}], "}"}], ",", 
+         ",", " ", "ones", ",", "insert", ",", "subMatrix"}], "}"}], ",", 
        "\[IndentingNewLine]", "\[IndentingNewLine]", 
        RowBox[{"(*", "Function", "*)"}], "\[IndentingNewLine]", 
        RowBox[{
@@ -4077,47 +4104,54 @@ Cell[BoxData[
              "adjacency", " ", "matrix"}], "*)"}], "\t", 
            "\[IndentingNewLine]", 
            RowBox[{"line", " ", "=", " ", 
-            RowBox[{"Normal", "[", 
+            RowBox[{"Normal", "@", 
              RowBox[{"adjacencyMatrix", "[", 
-              RowBox[{"[", "vertexNumber", "]"}], "]"}], "]"}]}], ";", 
+              RowBox[{"[", "vertexNumber", "]"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"ones", " ", "=", " ", 
-            RowBox[{"Catenate", "[", 
+            RowBox[{"Catenate", "@", 
              RowBox[{"Position", "[", 
-              RowBox[{"line", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{"line", ",", "1"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"adjacencyMatrix", "=", 
             RowBox[{"Delete", "[", 
              RowBox[{"adjacencyMatrix", ",", "vertexNumber"}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"Block", "[", 
-            RowBox[{
-             RowBox[{"{", "i", "}"}], ",", 
-             RowBox[{"Do", "[", "\[IndentingNewLine]", 
-              RowBox[{
+           RowBox[{"insert", "=", 
+            RowBox[{"SparseArray", "[", 
+             RowBox[{
+              RowBox[{"{", 
                RowBox[{
-                RowBox[{"adjacencyMatrix", "=", 
-                 RowBox[{"Insert", "[", 
-                  RowBox[{"adjacencyMatrix", ",", 
-                   RowBox[{"Catenate", "[", 
-                    RowBox[{"ReplacePart", "[", 
-                    RowBox[{
-                    RowBox[{"ConstantArray", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}], 
-                    ",", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"ones", "[", 
-                    RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
-                    "]"}], "]"}], ",", "vertexNumber"}], "]"}]}], ";"}], 
-               "\[IndentingNewLine]", ",", 
-               RowBox[{"{", 
-                RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], 
-              "\[IndentingNewLine]", "]"}]}], "]"}], ";", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"3", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", 
+                RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}]}], ";",
+            "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"adjacencyMatrix", "=", 
+              RowBox[{"Insert", "[", 
+               RowBox[{"adjacencyMatrix", ",", 
+                RowBox[{"insert", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", "vertexNumber"}], 
+               "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], ";", 
            "\[IndentingNewLine]", "\[IndentingNewLine]", 
            RowBox[{"(*", "Transpose", "*)"}], "\[IndentingNewLine]", 
            RowBox[{"adjacencyMatrix", "=", 
@@ -4127,51 +4161,59 @@ Cell[BoxData[
             RowBox[{
             "Second", " ", "division", " ", "pass", " ", "on", " ", 
              "adjacency", " ", "matrix"}], "*)"}], "\[IndentingNewLine]", 
-           RowBox[{"line", " ", "=", 
-            RowBox[{"Normal", "[", " ", 
+           RowBox[{"line", " ", "=", " ", 
+            RowBox[{"Normal", "@", 
              RowBox[{"adjacencyMatrix", "[", 
-              RowBox[{"[", "vertexNumber", "]"}], "]"}], "]"}]}], ";", 
+              RowBox[{"[", "vertexNumber", "]"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"ones", " ", "=", " ", 
-            RowBox[{"Catenate", "[", 
+            RowBox[{"Catenate", "@", 
              RowBox[{"Position", "[", 
-              RowBox[{"line", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{"line", ",", "1"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{"adjacencyMatrix", "=", 
             RowBox[{"Delete", "[", 
              RowBox[{"adjacencyMatrix", ",", "vertexNumber"}], "]"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"Block", "[", 
-            RowBox[{
-             RowBox[{"{", "i", "}"}], ",", 
-             RowBox[{"Do", "[", "\[IndentingNewLine]", 
-              RowBox[{
+           RowBox[{"insert", "=", 
+            RowBox[{"SparseArray", "[", 
+             RowBox[{
+              RowBox[{"{", 
                RowBox[{
-                RowBox[{"adjacencyMatrix", "=", 
-                 RowBox[{"Insert", "[", 
-                  RowBox[{"adjacencyMatrix", ",", 
-                   RowBox[{"Catenate", "[", 
-                    RowBox[{"ReplacePart", "[", 
-                    RowBox[{
-                    RowBox[{"ConstantArray", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}], 
-                    ",", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"ones", "[", 
-                    RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
-                    "]"}], "]"}], ",", "vertexNumber"}], "]"}]}], ";"}], 
-               "\[IndentingNewLine]", ",", 
-               RowBox[{"{", 
-                RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], 
-              "\[IndentingNewLine]", "]"}]}], "]"}], ";", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "->", "1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"3", ",", 
+                   RowBox[{"ones", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "->", "1"}]}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", 
+                RowBox[{"Length", "[", "line", "]"}]}], "}"}]}], "]"}]}], ";",
+            "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{"adjacencyMatrix", "=", 
+              RowBox[{"Insert", "[", 
+               RowBox[{"adjacencyMatrix", ",", 
+                RowBox[{"insert", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", "vertexNumber"}], 
+               "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}], ";", 
            "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
            RowBox[{"(*", 
-            RowBox[{"adding", " ", "the", " ", "submatrix"}], "*)"}], 
+            RowBox[{"Adding", " ", "the", " ", "submatrix"}], "*)"}], 
            "\[IndentingNewLine]", 
            RowBox[{
             RowBox[{"adjacencyMatrix", "[", 
@@ -4429,9 +4471,10 @@ Cell[BoxData[
    3.870512102028556*^9, 3.87051214365935*^9}, {3.870512190334806*^9, 
    3.870512372355507*^9}, {3.870512430227024*^9, 3.870512478133191*^9}, {
    3.870512589826395*^9, 3.870512841868102*^9}, 3.870512920771995*^9, {
-   3.870512956510133*^9, 3.870513088830497*^9}, 
-   3.870513174040782*^9},ExpressionUUID->"7a6f7feb-3264-4f78-a129-\
-90b1b5c87755"],
+   3.870512956510133*^9, 3.870513088830497*^9}, 3.870513174040782*^9, 
+   3.870668444187974*^9},
+ CellLabel->
+  "In[289]:=",ExpressionUUID->"7a6f7feb-3264-4f78-a129-90b1b5c87755"],
 
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`linearAlgebraToGraph$$, \
@@ -4609,7 +4652,10 @@ $CellContext`sV$}]]]}}, {DownValues[$CellContext`evolve$$] = {HoldPattern[
            Pattern[$CellContext`sV$, 
             Blank[]]}, 
           Pattern[$CellContext`rN$, 
-           Blank[]]]] :> 
+           Blank[]], 
+          Optional[
+           Pattern[$CellContext`it$, 
+            Blank[]], 1]]] :> 
        Module[{$CellContext`divisionVector = 
           Map[$CellContext`ruleDivision$$[$CellContext`rN$, #]& , 
             $CellContext`configurationVector$$[{$CellContext`aM$, \
@@ -4617,7 +4663,8 @@ $CellContext`sV$}]], $CellContext`adjacencyMatrix = $CellContext`aM$, \
 $CellContext`stateVector = $CellContext`newState$$[{$CellContext`aM$, \
 $CellContext`sV$}, $CellContext`rN$], $CellContext`replicate, \
 $CellContext`vertexNumber, $CellContext`state, $CellContext`line, \
-$CellContext`ones, $CellContext`subMatrix}, $CellContext`replicate[
+$CellContext`ones, $CellContext`insert, $CellContext`subMatrix}, \
+$CellContext`replicate[
             Pattern[$CellContext`v, 
              Blank[]], 
             Pattern[$CellContext`p, 
@@ -4639,36 +4686,35 @@ $CellContext`replicate[$CellContext`stateVector, $CellContext`vertexNumber,
               Part[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]]; \
 $CellContext`ones = Catenate[
               Position[$CellContext`line, 1]]; $CellContext`adjacencyMatrix = 
-            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; 
-           Block[{$CellContext`i}, 
-             
-             Do[$CellContext`adjacencyMatrix = 
-               Insert[$CellContext`adjacencyMatrix, 
-                 Catenate[
-                  ReplacePart[
-                   ConstantArray[0, {1, 
-                    Length[$CellContext`line]}], {1, 
-                    Part[$CellContext`ones, $CellContext`i]} -> 
-                   1]], $CellContext`vertexNumber]; 
-              Null, {$CellContext`i, 1, 3}]]; $CellContext`adjacencyMatrix = 
+            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; \
+$CellContext`insert = SparseArray[{{1, 
+                 Part[$CellContext`ones, 1]} -> 1, {2, 
+                 Part[$CellContext`ones, 2]} -> 1, {3, 
+                 Part[$CellContext`ones, 3]} -> 1}, {3, 
+               Length[$CellContext`line]}]; 
+           Do[$CellContext`adjacencyMatrix = 
+             Insert[$CellContext`adjacencyMatrix, 
+               
+               Part[$CellContext`insert, $CellContext`i], \
+$CellContext`vertexNumber], {$CellContext`i, 1, 
+              3}]; $CellContext`adjacencyMatrix = 
             Transpose[$CellContext`adjacencyMatrix]; $CellContext`line = 
             Normal[
               
               Part[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]]; \
 $CellContext`ones = Catenate[
               Position[$CellContext`line, 1]]; $CellContext`adjacencyMatrix = 
-            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; 
-           Block[{$CellContext`i}, 
-             
-             Do[$CellContext`adjacencyMatrix = 
-               Insert[$CellContext`adjacencyMatrix, 
-                 Catenate[
-                  ReplacePart[
-                   ConstantArray[0, {1, 
-                    Length[$CellContext`line]}], {1, 
-                    Part[$CellContext`ones, $CellContext`i]} -> 
-                   1]], $CellContext`vertexNumber]; 
-              Null, {$CellContext`i, 1, 3}]]; 
+            Delete[$CellContext`adjacencyMatrix, $CellContext`vertexNumber]; \
+$CellContext`insert = SparseArray[{{1, 
+                 Part[$CellContext`ones, 1]} -> 1, {2, 
+                 Part[$CellContext`ones, 2]} -> 1, {3, 
+                 Part[$CellContext`ones, 3]} -> 1}, {3, 
+               Length[$CellContext`line]}]; 
+           Do[$CellContext`adjacencyMatrix = 
+             Insert[$CellContext`adjacencyMatrix, 
+               
+               Part[$CellContext`insert, $CellContext`i], \
+$CellContext`vertexNumber], {$CellContext`i, 1, 3}]; 
            Part[$CellContext`adjacencyMatrix, 
               Span[$CellContext`vertexNumber, $CellContext`vertexNumber + 2], 
               
@@ -4724,9 +4770,11 @@ $CellContext`evolve$$[$CellContext`inGraph$, $CellContext`inRule$];
               Length[
                Part[$CellContext`inGraph$, 2]]]], $CellContext`maxTime$]; 
          Return[$CellContext`inList$]; Null]}}}]], "Output",
- CellChangeTimes->{3.87051316174531*^9},
+ CellChangeTimes->{
+  3.87051316174531*^9, {3.8706684533668623`*^9, 3.8706684543759413`*^9}},
  TextAlignment->Center,
- CellLabel->"Out[65]=",ExpressionUUID->"a3dc0e47-944f-4b09-a25e-eadec7820edd"]
+ CellLabel->
+  "Out[289]=",ExpressionUUID->"8e3433a9-de85-4680-af4e-99f9d6f66012"]
 }, {2}]]
 }, Open  ]]
 }, Open  ]]
@@ -4757,25 +4805,25 @@ Cell[1031, 35, 71, 0, 35, "Text",ExpressionUUID->"f25444f9-5e36-4e3e-aba1-b1dc74
 Cell[CellGroupData[{
 Cell[1127, 39, 148, 3, 67, "Section",ExpressionUUID->"c6af423b-65b0-4ef3-abf0-0912e38937c0"],
 Cell[CellGroupData[{
-Cell[1300, 46, 50953, 1043, 1644, "Input",ExpressionUUID->"517d5bcb-7972-4ef0-ab29-92906cc91c66",
+Cell[1300, 46, 50958, 1044, 1644, "Input",ExpressionUUID->"517d5bcb-7972-4ef0-ab29-92906cc91c66",
  InitializationCell->True],
-Cell[52256, 1091, 27389, 504, 287, "Output",ExpressionUUID->"2ea2cd82-da34-4e2f-a3c6-b6f50a00ab20"]
+Cell[52261, 1092, 27467, 506, 264, "Output",ExpressionUUID->"cd237b64-34b4-4948-ad23-7cc63dd913bf"]
 }, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[79691, 1601, 300, 5, 67, "Section",ExpressionUUID->"8b1a75de-e221-4835-9cf5-1f595d975ed0"],
+Cell[79774, 1604, 300, 5, 67, "Section",ExpressionUUID->"8b1a75de-e221-4835-9cf5-1f595d975ed0"],
 Cell[CellGroupData[{
-Cell[80016, 1610, 24342, 587, 2258, "Input",ExpressionUUID->"84003cbe-3035-4bc0-a64c-158b387b9024",
+Cell[80099, 1613, 24838, 604, 1880, "Input",ExpressionUUID->"84003cbe-3035-4bc0-a64c-158b387b9024",
  InitializationCell->True],
-Cell[104361, 2199, 101787, 1589, 527, "Output",ExpressionUUID->"cfc78123-1e33-43e8-9b68-b4f1adbc829f"]
+Cell[104940, 2219, 102008, 1595, 527, "Output",ExpressionUUID->"1f92f9c0-4e3b-4c74-b29a-bfc6001b85d5"]
 }, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[206194, 3794, 299, 5, 67, "Section",ExpressionUUID->"553dd506-7ca7-4399-926f-aab15e8ada83"],
+Cell[206994, 3820, 299, 5, 67, "Section",ExpressionUUID->"553dd506-7ca7-4399-926f-aab15e8ada83"],
 Cell[CellGroupData[{
-Cell[206518, 3803, 26623, 630, 1964, "Input",ExpressionUUID->"7a6f7feb-3264-4f78-a129-90b1b5c87755",
+Cell[207318, 3829, 27134, 647, 1901, "Input",ExpressionUUID->"7a6f7feb-3264-4f78-a129-90b1b5c87755",
  InitializationCell->True],
-Cell[233144, 4435, 13840, 293, 467, "Output",ExpressionUUID->"a3dc0e47-944f-4b09-a25e-eadec7820edd"]
+Cell[234455, 4478, 14046, 298, 467, "Output",ExpressionUUID->"8e3433a9-de85-4680-af4e-99f9d6f66012"]
 }, {2}]]
 }, Open  ]]
 }, Open  ]]
