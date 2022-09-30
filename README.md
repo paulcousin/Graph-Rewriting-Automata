@@ -1,29 +1,17 @@
-This repository contains several Mathematica notebooks complementing the paper titled ***Organic Structures Emerging From Bio-Inspired Graph-Rewriting Automata***, authored by Paul Cousin and Aude Maignan in 2022.
-
-
----
-
-## interactive-modules.nb
-This notebook can be interacted with in the free [Wolfram Player](https://www.wolfram.com/player/).
-
-It contains the following dynamic modules:
-
-![rules]
-
-![evolution]
-
-![growth]
-
-⚠️ You must click on ![dynamics] after opening the file.
+This repository contains several files complementing the paper titled ***Organic Structures Emerging From Bio-Inspired Graph-Rewriting Automata***, authored by Paul Cousin and Aude Maignan in 2022.
 
 ---
 
-## functions-and-examples.nb
-This notebook contains mathematica functions used to obtain the results that can be found in the paper, along with examples of their use.
+### python.ipynb
+This is a Jupiter notebook with gpu accelerated code to work with graph rewriting automata, along with examples.
 
 ---
 
-[dynamics]: https://github.com/paulcousin/graph-rewriting-automata/blob/main/images/dynamics.png?raw=true
-[rules]: https://github.com/paulcousin/graph-rewriting-automata/blob/main/images/rules.png?raw=true
-[evolution]: https://github.com/paulcousin/graph-rewriting-automata/blob/main/images/evolution.png?raw=true
-[growth]: https://github.com/paulcousin/graph-rewriting-automata/blob/main/images/growth.png?raw=true
+### mathematica.nb
+This is a Mathematica notebook containing the functions used to obtain the results that can be found in the paper, along with examples.
+
+---
+
+### mathematica-interactive.nb
+This Mathematica notebook can be interacted with in the free [Wolfram Player](https://www.wolfram.com/player/). ( You must click on **Enable Dynamics** after opening the file. )
+
