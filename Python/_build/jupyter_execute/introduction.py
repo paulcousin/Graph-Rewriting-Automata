@@ -3,7 +3,9 @@
 
 # # Introduction
 # 
-# This document is an introduction to Graph-Rewriting Automata and the GRA library.
+# This document is an introduction to Graph-Rewriting Automata and the GRA library. 
+# 
+# The GRA library can used simply by including the file `gra.py` into your working folder.
 # 
 # ## General concept
 # 

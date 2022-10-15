@@ -33,6 +33,7 @@
 # * `.evolve(rule)`: evolves the graph according the `rule`
 # * `.order()`: returns the order of the graph
 # * `.clone()`: returns a copy of the graph
+# * `.isomorphic(other_graph)`: returns `True` if there exists an isomorphism including states between the graph and `other_graph`
 # * `.igraph()`: returns an igraph Graph object 
 # * `.mathematica()`: returns a string corresponding to a Mathematica compatible version of the graph
 # 
@@ -50,7 +51,7 @@
 
 import gra
 
-gra.Graph([ # adjacency matrix
+graph1 = gra.Graph([ # adjacency matrix
         [0, 1, 1, 1],
         [1, 0, 1, 1],
         [1, 1, 0, 1],
@@ -60,5 +61,27 @@ gra.Graph([ # adjacency matrix
         [0],
         [0],
         [0] 
-    ]).plot()
+    ])
+
+graph1.plot()
+
+
+# We can check if this graph is isomorphic to another that we choose to only differ by the position of the living vertex.
+
+# In[2]:
+
+
+graph1.isomorphic(
+    gra.Graph([ # adjacency matrix
+        [0, 1, 1, 1],
+        [1, 0, 1, 1],
+        [1, 1, 0, 1],
+        [1, 1, 1, 0] 
+    ],[ # state vector
+        [0],
+        [0],
+        [1],
+        [0] 
+    ]))
+
 

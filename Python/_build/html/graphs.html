@@ -379,6 +379,7 @@ title="Print to PDF"
 <li><p><code class="docutils literal notranslate"><span class="pre">.evolve(rule)</span></code>: evolves the graph according the <code class="docutils literal notranslate"><span class="pre">rule</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.order()</span></code>: returns the order of the graph</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.clone()</span></code>: returns a copy of the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.isomorphic(other_graph)</span></code>: returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if there exists an isomorphism including states between the graph and <code class="docutils literal notranslate"><span class="pre">other_graph</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.igraph()</span></code>: returns an igraph Graph object</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.mathematica()</span></code>: returns a string corresponding to a Mathematica compatible version of the graph</p></li>
 </ul>
@@ -399,7 +400,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gra</span>
 
-<span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
+<span class="n">graph1</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -409,12 +410,38 @@ title="Print to PDF"
         <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-    <span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+    <span class="p">])</span>
+
+<span class="n">graph1</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/graphs_1_0.svg" src="_images/graphs_1_0.svg" /></div>
+</div>
+<p>We can check if this graph is isomorphic to another that we choose to only differ by the position of the living vertex.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph1</span><span class="o">.</span><span class="n">isomorphic</span><span class="p">(</span>
+    <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
+    <span class="p">],[</span> <span class="c1"># state vector</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+    <span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
