@@ -1,6 +1,0 @@
-format: jb-book
-root: introduction
-chapters:
-- file: graphs
-- file: rules
-- file: references

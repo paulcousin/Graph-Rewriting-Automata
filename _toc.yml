@@ -1,0 +1,12 @@
+format: jb-book
+root: introduction
+chapters:
+- file: graphs
+  sections:
+  - file: graphs/implementation
+  - file: graphs/initial-graphs
+- file: rules
+  sections:
+  - file: rules/implementation
+- file: analysis
+- file: references
