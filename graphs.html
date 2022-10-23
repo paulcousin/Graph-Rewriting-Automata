@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Rules" href="rules.html" />
+    <link rel="next" title="Implementation" href="graphs/implementation.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -117,14 +117,48 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Graphs
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="graphs/implementation.html">
+     Implementation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="graphs/initial-graphs.html">
+     Initial graphs
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="rules.html">
    Rules
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rules/implementation.html">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="analysis.html">
+   Analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -221,6 +255,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
+<a href="https://github.com/paulcousin/graph-rewriting-automata"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -267,46 +314,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#theory">
-   Theory
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementation">
-   Implementation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -318,29 +331,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#theory">
-   Theory
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementation">
-   Implementation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -350,12 +340,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="graphs">
 <h1>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">#</a></h1>
-<section id="theory">
-<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">#</a></h2>
-<p>A <strong>graph</strong> <span class="math notranslate nohighlight">\(G\)</span> of order <span class="math notranslate nohighlight">\(o\)</span> will be fully described by a square <strong>adjacency matrix</strong> <span class="math notranslate nohighlight">\(\mathcal{A}\in\mathbb{M}_{o\times o}(\mathbb{K})\)</span> and a <strong>state vector</strong> <span class="math notranslate nohighlight">\(\mathcal{S}\in\mathbb{K}^{o}\)</span>.</p>
+<p>A <strong>graph</strong> <span class="math notranslate nohighlight">\(G\)</span> of order <span class="math notranslate nohighlight">\(o\)</span> will be fully described by a square <strong>adjacency matrix</strong> <span class="math notranslate nohighlight">\(\mathcal{A}\in\mathbb{M}_{o\times o}(\mathbb{R})\)</span> and a <strong>state vector</strong> <span class="math notranslate nohighlight">\(\mathcal{S}\in\mathbb{R}^{o}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[G = \{\mathcal{A}, \mathcal{S}\}\]</div>
-<p>The <strong>adjacency matrix</strong> contains the weights <span class="math notranslate nohighlight">\(w(e_{i,j})\)</span> of the edges (from <span class="math notranslate nohighlight">\(v_i\)</span> to <span class="math notranslate nohighlight">\(v_j\)</span> in this case). The particular case of <span class="math notranslate nohighlight">\(w(e_{i,j})=0\)</span> indicates that their is no edge going from <span class="math notranslate nohighlight">\(v_i\)</span> to <span class="math notranslate nohighlight">\(v_j\)</span>.</p>
+<p>The <strong>adjacency matrix</strong> contains the weights <span class="math notranslate nohighlight">\(w(e_{i,j})\)</span> of the edges (from the vertex <span class="math notranslate nohighlight">\(v_i\)</span> to <span class="math notranslate nohighlight">\(v_j\)</span> in this case). The particular case of <span class="math notranslate nohighlight">\(w(e_{i,j})=0\)</span> indicates that their is no edge going from <span class="math notranslate nohighlight">\(v_i\)</span> to <span class="math notranslate nohighlight">\(v_j\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{A}_{i,j}=w(e_{i,j})\]</div>
 <p>The <strong>state vector</strong> contains the states <span class="math notranslate nohighlight">\(s(v_i)\)</span> of the vertices <span class="math notranslate nohighlight">\(v_i\)</span>.</p>
@@ -365,85 +353,8 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \sum \limits _{v_i\in N(v_1)} w(e_{1,i})\times s(v_i) \\ \vdots \\ \sum \limits _{v_i\in N(v_o)} w(e_{o,i})\times s(v_i) \end{pmatrix}=\begin{pmatrix} \sum \limits _{i=1}^o w(e_{1,i})\times s(v_i) \\ \vdots \\ \sum \limits _{i=1}^o w(e_{o,i})\times s(v_i) \end{pmatrix}=\mathcal{A}\cdot\mathcal{S}\end{split}\]</div>
 <p>We can also define the <strong>n-th neighborhood</strong> <span class="math notranslate nohighlight">\(N_n(v)\)</span> of a vertex as the set of vertices which are at a distance <span class="math notranslate nohighlight">\(n\)</span> of <span class="math notranslate nohighlight">\(v\)</span>.</p>
-</section>
-<section id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">Graph</span></code> class has the atributes:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code> ( an instance of the SparseTensor class of TensorFlow )</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state_vector</span></code> ( an instance of the Tensor class of TensorFlow )</p></li>
-</ul>
-<p>And the methods:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">.plot()</span></code>: plots the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.evolve(rule)</span></code>: evolves the graph according the <code class="docutils literal notranslate"><span class="pre">rule</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.order()</span></code>: returns the order of the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.clone()</span></code>: returns a copy of the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.isomorphic(other_graph)</span></code>: returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if there exists an isomorphism including states between the graph and <code class="docutils literal notranslate"><span class="pre">other_graph</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.igraph()</span></code>: returns an igraph Graph object</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.mathematica()</span></code>: returns a string corresponding to a Mathematica compatible version of the graph</p></li>
-</ul>
-<p>It can be instantiated with:</p>
-<ul class="simple">
-<li><p>an adjacency matrix that can be either a python nested array or a tensorflow sparse tensor.</p></li>
-<li><p>a state vector that can eiher be a python nested array or a tensorflow tensor.</p></li>
-</ul>
-</section>
-<section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
-<p>The following piece of code displays a simple graph with 4 vertices with binary states:</p>
-<ul class="simple">
-<li><p>s(v)=1, called ‘alive’ and colored <span style="color:purple"><em>purple</em></span>,</p></li>
-<li><p>s(v)=0, called ‘dead’ and colored <span style="color:orange"><em>orange</em></span>.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gra</span>
-
-<span class="n">graph1</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
-    <span class="p">],[</span> <span class="c1"># state vector</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-    <span class="p">])</span>
-
-<span class="n">graph1</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
+<div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/graphs_1_0.svg" src="_images/graphs_1_0.svg" /></div>
-</div>
-<p>We can check if this graph is isomorphic to another that we choose to only differ by the position of the living vertex.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph1</span><span class="o">.</span><span class="n">isomorphic</span><span class="p">(</span>
-    <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
-    <span class="p">],[</span> <span class="c1"># state vector</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-    <span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -480,10 +391,10 @@ title="Print to PDF"
             <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="rules.html" title="next page">
+    <a class='right-next' id="next-link" href="graphs/implementation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rules</p>
+        <p class="prev-next-title">Implementation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
