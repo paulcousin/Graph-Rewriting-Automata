@@ -1,17 +1,5 @@
-This repository contains several files complementing the paper titled ***Organic Structures Emerging From Bio-Inspired Graph-Rewriting Automata***, authored by Paul Cousin and Aude Maignan in 2022.
+This repository contains the source code of the website [paulcousin.github.io/graph-rewriting-automata](https://paulcousin.github.io/graph-rewriting-automata/).
 
----
-
-### python.ipynb
-This is a Jupiter notebook with gpu accelerated code to work with graph rewriting automata, along with examples.
-
----
-
-### mathematica.nb
-This is a Mathematica notebook containing the functions used to obtain the results that can be found in the paper, along with examples.
-
----
-
-### mathematica-interactive.nb
-This Mathematica notebook can be interacted with in the free [Wolfram Player](https://www.wolfram.com/player/). ( You must click on **Enable Dynamics** after opening the file. )
-
+It was made using [Jupyter Book](https://jupyterbook.org/) and makes use of the code present in the following repositories :
+* [paulcousin/gra-python](https://github.com/paulcousin/gra-python)
+* [paulcousin/gra-mathematica](https://github.com/paulcousin/gra-mathematica)
