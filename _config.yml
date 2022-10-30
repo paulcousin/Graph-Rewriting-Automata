@@ -77,8 +77,8 @@ launch_buttons:
 
 repository:
   url                       : https://github.com/paulcousin/graph-rewriting-automata  # The URL to your book's repository
-  path_to_book              : Python/  # A path to your book's folder, relative to the repository root.
-  branch                    : jupyter-book  # Which branch of the repository should be used when creating links (optional)
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : main  # Which branch of the repository should be used when creating links (optional)
 
 #######################################################################################
 # Advanced and power-user settings
