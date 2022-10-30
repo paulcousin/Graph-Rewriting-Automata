@@ -55,8 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Implementation" href="rules/implementation.html" />
-    <link rel="prev" title="Initial graphs" href="graphs/initial-graphs.html" />
+    <link rel="next" title="Analysis" href="analysis.html" />
+    <link rel="prev" title="Graphs" href="graphs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,48 +117,24 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="graphs.html">
    Graphs
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="graphs/implementation.html">
-     Implementation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="graphs/initial-graphs.html">
-     Initial graphs
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Rules
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rules/implementation.html">
-     Implementation
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="analysis.html">
    Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gallery.html">
+   Gallery
   </a>
  </li>
  <li class="toctree-l1">
@@ -221,7 +197,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/paulcousin/graph-rewriting-automata/jupyter-book?urlpath=tree/Python/rules.ipynb"
+        <a href="https://mybinder.org/v2/gh/paulcousin/graph-rewriting-automata/main?urlpath=tree/rules.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -314,12 +290,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theory">
+   Theory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation">
+   Implementation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimal-graphs">
+   Minimal graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rules-and-rule-plots">
+   Rules and rule plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#behavior">
+   Behavior
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -331,6 +351,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theory">
+   Theory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation">
+   Implementation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimal-graphs">
+   Minimal graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rules-and-rule-plots">
+   Rules and rule plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#behavior">
+   Behavior
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -340,7 +393,9 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="rules">
 <h1>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">#</a></h1>
-<p>Here, we are going to focus graphs with the following properties:</p>
+<section id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">#</a></h2>
+<p>Here, the focus will be put on graphs with the following properties:</p>
 <ul class="simple">
 <li><p>binary: <span class="math notranslate nohighlight">\(s(v)\in \{0,1\}\)</span></p></li>
 <li><p>d-regular: <span class="math notranslate nohighlight">\(\#N(v)=d\)</span></p></li>
@@ -352,7 +407,7 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-<p>The rules that will be considered must:</p>
+<p>The <strong>rules</strong> that will be considered must:</p>
 <ul class="simple">
 <li><p>keep these properties invariant,</p></li>
 <li><p>be local to a vertex and its neighborhood,</p></li>
@@ -380,12 +435,183 @@ title="Print to PDF"
         0, &amp; \text{otherwise}
         \end{array}\end{cases}
 \end{aligned}\end{split}\]</div>
-<p>Every d-regular  rule can thus be labeled by a unique <strong>rule number</strong> <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Every d-regular rule can thus be labeled by a unique <strong>rule number</strong> <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[n=\sum_{i=0}^7 \left[ 2^i R(i) +  2^{i+2(d+1)} R'(i) \right]\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This labeling system, inspired by the Wolfram code <span id="id1">[<a class="reference internal" href="references.html#id16" title="Stephen Wolfram. A New Kind of Science. Wolfram Media, 2002. ISBN 1579550088.">2</a>]</span>, is such that a rule number in its binary form displays the behavior of the rule. Starting from the right, the <span class="math notranslate nohighlight">\(2(d+1)\)</span> first digits indicate the future state for each configuration as they have been ordered previously. The <span class="math notranslate nohighlight">\(2(d+1)\)</span> following digits show when a division occurs.</p>
-<div class="toctree-wrapper compound">
 </div>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">#</a></h2>
+<p>The application of a rule to a graph will come in several steps which are strictly equivalent to the rule being applied all at once. <span class="math notranslate nohighlight">\(o\)</span> being the order of the graph and &#64; being the operator applying a function to every element of a vector, the first step consists of computing a <strong>configuration vector</strong> <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{C}=\begin{pmatrix} c(v_1) \\ \vdots \\ c(v_o) \end{pmatrix}
+=(d+1)\times\mathcal{S}+\mathcal{A}\cdot\mathcal{S}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\mathcal{S}\)</span> can then be updated as follows.</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{S}=R\text{&#64;}\mathcal{C}\]</div>
+<p>A <strong>division vector</strong> <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is computed similarly.</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{D}=R'\text{&#64;}\mathcal{C}\]</div>
+<p>Divisions can now be performed one by one as a combination of simple operations on matrices. The first 1 in <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> signals the vertex to divide. For the state vector, suffice to replicate the line corresponding to this vertex d times. For the adjacency matrix, both the line and the column must be replicated. Ones then have to be spread across these lines and columns and the intersection must be filled with a sub-matrix containing zeros on the diagonal and ones everywhere else. Finally, the first 1 in the division vector is turned into a 0 and then replicated. This process must be repeated until <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is a null vector.</p>
+<table class="table" id="id2">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Example of division in a 3-regular graph</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>State vector</p></th>
+<th class="head"><p>Adjacency matrix</p></th>
+<th class="head"><p>Division vector</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(
+\begin{pmatrix}
+1 \\ {\color{red}0} \\ 0 \\ 0 
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 \\ {\color{red}0} \\ {\color{red}0} \\ {\color{red}0} \\ 0 \\ 0
+\end{pmatrix}
+\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(
+\begin{pmatrix}
+0 &amp; {\color{red}1} &amp; 1 &amp; 1 \\
+{\color{red}1} &amp; {\color{purple}0} &amp; {\color{red}1} &amp; {\color{red}1} \\
+1 &amp; {\color{red}1} &amp; 0 &amp; 1 \\
+1 &amp; {\color{red}1} &amp; 1 &amp; 0
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+0 &amp; {\color{red}1} &amp; {\color{orange}0} &amp; {\color{orange}0} &amp; 1 &amp; 1 \\
+{\color{red}1} &amp; {\color{purple}0} &amp; {\color{purple}1} &amp; {\color{purple}1} &amp; {\color{orange}0} &amp; {\color{orange}0} \\
+{\color{orange}0} &amp; {\color{purple}1} &amp; {\color{purple}0} &amp; {\color{purple}1} &amp; {\color{red}1} &amp; {\color{orange}0} \\
+{\color{orange}0} &amp; {\color{purple}1} &amp; {\color{purple}1} &amp; {\color{purple}0} &amp; {\color{orange}0} &amp; {\color{red}1} \\
+1 &amp; {\color{orange}0} &amp; {\color{red}1} &amp; {\color{orange}0} &amp; 0 &amp; 1 \\
+1 &amp; {\color{orange}0} &amp; {\color{orange}0} &amp; {\color{red}1} &amp; 1 &amp; 0
+\end{pmatrix}
+\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(
+\begin{pmatrix}
+0 \\ {\color{red}1} \\ 1 \\ 1 
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+0 \\ {\color{red}0} \\ 1 \\ 1 
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+0 \\ {\color{red}0} \\ {\color{red}0} \\ {\color{red}0} \\ 1 \\ 1
+\end{pmatrix}
+\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Implementing GRA rules must leverage a sparse array format to be efficient.</p>
+</div>
+</section>
+<section id="minimal-graphs">
+<h2>Minimal graphs<a class="headerlink" href="#minimal-graphs" title="Permalink to this headline">#</a></h2>
+<p>Once a rule is defined, it is possible to search for interesting initial graphs. Here is are some criteria :</p>
+<ul class="simple">
+<li><p><strong>configuration-complete</strong>: the graph contains every possible local configuration,</p></li>
+<li><p><strong>color-symetric</strong>: the graph stays the same under color-reversal,</p></li>
+<li><p><strong>small</strong>: the graph contains the smallest number of vertices.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The order of such a graph must necessarily exceed by at least two the number of possible configurations. Indeed, we saw that a d-regular graph has <span class="math notranslate nohighlight">\(2(d+1)\)</span> possible local configurations. If the graph is configuration-complete, there is an alive vertex connected to d alive vertices and another connect to none. This makes for <span class="math notranslate nohighlight">\(d+2\)</span> alive vertices and the same goes for dead vertices. Thus, a configuration complete graph must contain at least <span class="math notranslate nohighlight">\(2(d+2)\)</span> vertices.</p>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">minimal_regular_graphs(d)</span></code> computes the list of every d-regular graphs meeting the listed criteria.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gra</span>
+
+<span class="n">graphs</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">minimal_regular_graphs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100% -&gt; 3 graphs found
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g0</span> <span class="o">=</span> <span class="n">graphs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">g0</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/rules_4_0.svg" src="_images/rules_4_0.svg" /></div>
+</div>
+</section>
+<section id="rules-and-rule-plots">
+<h2>Rules and rule plots<a class="headerlink" href="#rules-and-rule-plots" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Rule</span></code> class must be provided a <strong>degree</strong> and a <strong>rule number</strong>. The <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> method can be used to generate a graphical representation of a rule’s action on a graph.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rule2236</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2236</span><span class="p">)</span>
+<span class="n">rule2236</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/rules_6_0.png" src="_images/rules_6_0.png" />
+</div>
+</div>
+</section>
+<section id="behavior">
+<h2>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">#</a></h2>
+<p>We can plot the growth of <span class="math notranslate nohighlight">\(G_0\)</span> under this rule using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">g0</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+<span class="n">time_max</span> <span class="o">=</span> <span class="mi">70</span>
+
+<span class="c1"># initialize the list that will hold the succesive graph orders with the first value</span>
+<span class="n">growth</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span><span class="o">.</span><span class="n">order</span><span class="p">()]</span>
+
+<span class="c1"># loop that evolves the graph then adds the new graph order to the list</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">time_max</span><span class="p">):</span>
+    <span class="n">rule2236</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">growth</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">order</span><span class="p">())</span>
+
+<span class="c1"># growth plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">growth</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Growth of G0 under rule 2236&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;graph order&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/rules_8_0.png" src="_images/rules_8_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># final graph obtained (t=70)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/rules_9_0.svg" src="_images/rules_9_0.svg" /></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -415,17 +641,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="graphs/initial-graphs.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="graphs.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Initial graphs</p>
+            <p class="prev-next-title">Graphs</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="rules/implementation.html" title="next page">
+    <a class='right-next' id="next-link" href="analysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Implementation</p>
+        <p class="prev-next-title">Analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

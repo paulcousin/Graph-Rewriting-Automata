@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Implementation" href="graphs/implementation.html" />
+    <link rel="next" title="Rules" href="rules.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -117,48 +117,24 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Graphs
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="graphs/implementation.html">
-     Implementation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="graphs/initial-graphs.html">
-     Initial graphs
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="rules.html">
    Rules
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rules/implementation.html">
-     Implementation
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="analysis.html">
    Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gallery.html">
+   Gallery
   </a>
  </li>
  <li class="toctree-l1">
@@ -221,7 +197,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/paulcousin/graph-rewriting-automata/jupyter-book?urlpath=tree/Python/graphs.ipynb"
+        <a href="https://mybinder.org/v2/gh/paulcousin/graph-rewriting-automata/main?urlpath=tree/graphs.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -314,12 +290,43 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation">
+   Implementation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -331,6 +338,26 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation">
+   Implementation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -353,8 +380,82 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \sum \limits _{v_i\in N(v_1)} w(e_{1,i})\times s(v_i) \\ \vdots \\ \sum \limits _{v_i\in N(v_o)} w(e_{o,i})\times s(v_i) \end{pmatrix}=\begin{pmatrix} \sum \limits _{i=1}^o w(e_{1,i})\times s(v_i) \\ \vdots \\ \sum \limits _{i=1}^o w(e_{o,i})\times s(v_i) \end{pmatrix}=\mathcal{A}\cdot\mathcal{S}\end{split}\]</div>
 <p>We can also define the <strong>n-th neighborhood</strong> <span class="math notranslate nohighlight">\(N_n(v)\)</span> of a vertex as the set of vertices which are at a distance <span class="math notranslate nohighlight">\(n\)</span> of <span class="math notranslate nohighlight">\(v\)</span>.</p>
-<div class="toctree-wrapper compound">
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Graph</span></code> class has the atributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code> ( an instance of the SparseTensor class of TensorFlow )</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state_vector</span></code> ( an instance of the Tensor class of TensorFlow )</p></li>
+</ul>
+<p>And the methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.plot()</span></code>: plots the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.evolve(rule)</span></code>: evolves the graph according the <code class="docutils literal notranslate"><span class="pre">rule</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.order()</span></code>: returns the order of the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.clone()</span></code>: returns a copy of the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.igraph()</span></code>: returns an igraph Graph object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.mathematica()</span></code>: returns a string corresponding to a Mathematica compatible version of the graph</p></li>
+</ul>
+<p>It can be instantiated with:</p>
+<ul class="simple">
+<li><p>an adjacency matrix that can be either a python nested array or a tensorflow sparse tensor.</p></li>
+<li><p>a state vector that can eiher be a python nested array or a tensorflow tensor.</p></li>
+</ul>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
+<p>The following piece of code displays a simple graph with 4 vertices with binary states:</p>
+<ul class="simple">
+<li><p>s(v)=1, called ‘alive’ and colored <span style="color:purple"><em>purple</em></span>,</p></li>
+<li><p>s(v)=0, called ‘dead’ and colored <span style="color:orange"><em>orange</em></span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gra</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
+    <span class="p">],[</span> <span class="c1"># state vector</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+    <span class="p">])</span>
+
+<span class="n">graph</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/graphs_2_0.svg" src="_images/graphs_2_0.svg" /></div>
+</div>
+<p>Graphs with a different ordering of vertices are equivalent. This equivalence can be checked with <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span> <span class="o">==</span> <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
+    <span class="p">],[</span> <span class="c1"># state vector</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+    <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -391,10 +492,10 @@ title="Print to PDF"
             <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="graphs/implementation.html" title="next page">
+    <a class='right-next' id="next-link" href="rules.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Implementation</p>
+        <p class="prev-next-title">Rules</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
