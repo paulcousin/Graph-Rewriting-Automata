@@ -332,11 +332,6 @@ title="Print to PDF"
    Rules and rule plots
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#behavior">
-   Behavior
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -374,11 +369,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rules-and-rule-plots">
    Rules and rule plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#behavior">
-   Behavior
   </a>
  </li>
 </ul>
@@ -546,8 +536,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g0</span> <span class="o">=</span> <span class="n">graphs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">g0</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graphs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -560,8 +549,8 @@ title="Print to PDF"
 <p>The <code class="docutils literal notranslate"><span class="pre">Rule</span></code> class must be provided a <strong>degree</strong> and a <strong>rule number</strong>. The <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> method can be used to generate a graphical representation of a rule’s action on a graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rule2236</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2236</span><span class="p">)</span>
-<span class="n">rule2236</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rule</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Rule</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2238</span><span class="p">)</span>
+<span class="n">rule</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -569,47 +558,27 @@ title="Print to PDF"
 <img alt="_images/rules_6_0.png" src="_images/rules_6_0.png" />
 </div>
 </div>
-</section>
-<section id="behavior">
-<h2>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">#</a></h2>
-<p>We can plot the growth of <span class="math notranslate nohighlight">\(G_0\)</span> under this rule using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<p>We can now use this rule to evolve one of our 3-regular graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">g</span> <span class="o">=</span> <span class="n">g0</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
-<span class="n">time_max</span> <span class="o">=</span> <span class="mi">70</span>
-
-<span class="c1"># initialize the list that will hold the succesive graph orders with the first value</span>
-<span class="n">growth</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span><span class="o">.</span><span class="n">order</span><span class="p">()]</span>
-
-<span class="c1"># loop that evolves the graph then adds the new graph order to the list</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">time_max</span><span class="p">):</span>
-    <span class="n">rule2236</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-    <span class="n">growth</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">order</span><span class="p">())</span>
-
-<span class="c1"># growth plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">growth</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Growth of G0 under rule 2236&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;graph order&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rule</span><span class="p">(</span><span class="n">graphs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="c1"># or equivalently: graphs[1].clone().evolve(rule).plot()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/rules_8_0.png" src="_images/rules_8_0.png" />
+<img alt="_images/rules_8_0.svg" src="_images/rules_8_0.svg" /></div>
 </div>
-</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.jump()</span></code> method can be used to chackout the graph obtained by applying the rule n times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># final graph obtained (t=70)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graphs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">jump</span><span class="p">(</span><span class="n">rule</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="c1"># or equivalently: rule.jump(graphs[1].clone(),120).plot()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/rules_9_0.svg" src="_images/rules_9_0.svg" /></div>
+<img alt="_images/rules_10_0.svg" src="_images/rules_10_0.svg" /></div>
 </div>
 </section>
 </section>
