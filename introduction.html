@@ -315,12 +315,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
-<p>This document is an introduction to <strong>Graph-Rewriting Automata</strong> and the <a class="reference external" href="https://github.com/paulcousin/gra-python"><strong>GRA</strong> python package</a>.</p>
+<p>This document is an introduction to <strong>Graph-Rewriting Automata</strong> (GRA).</p>
 <p>GRA are an extension of <strong>Cellular Automata</strong> to a dynamic structure using local graph-rewriting rules. In this framework, initially simple graphs can evolve into complex self-organized structures. GRA display complex behaviors and can thus constitute a useful model of natural phenomena.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The concepts presented here are in the continuity of a previous work <span id="id1">[<a class="reference internal" href="references.html#id2" title="Paul Cousin and Aude Maignan. Organic structures emerging from bio-inspired graph-rewriting automata. In 2022 24th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC). 2022.">1</a>]</span> that was implemented in <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a>. This code can be found in a dedicated <a class="reference external" href="https://github.com/paulcousin/gra-mathematica">GitHub repository</a>. However, the new python implementation leverages <a class="reference external" href="https://www.tensorflow.org">TensorFlow</a> for GPU accelerated computations and has more functionality.</p>
-</div>
 <p>A <strong>Graph-Rewriting Automaton</strong> consists of:</p>
 <ul class="simple">
 <li><p>an <strong>initial graph</strong> <span class="math notranslate nohighlight">\(G_0\)</span> defined at time step <span class="math notranslate nohighlight">\(t=0\)</span>,</p></li>
@@ -331,10 +327,14 @@ title="Print to PDF"
 <p>In the following, a linear algebra based approach to GRA will be presented along with code examples.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>You can install the GRA package on your machine using the following command.</p>
+<p>The code examples relie on the <a class="reference external" href="https://github.com/paulcousin/gra-python"><strong>GRA</strong> python package</a>. To install it on your computer, type the following command in you terminal.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">gra</span>
 </pre></div>
 </div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The concepts presented here are in the continuity of a previous work <span id="id1">[<a class="reference internal" href="references.html#id2" title="Paul Cousin and Aude Maignan. Organic structures emerging from bio-inspired graph-rewriting automata. In 2022 24th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC). 2022.">1</a>]</span> that was implemented in <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a>. This code can be found in a dedicated <a class="reference external" href="https://github.com/paulcousin/gra-mathematica">GitHub repository</a>. The new python implementation leverages <a class="reference external" href="https://www.tensorflow.org">TensorFlow</a> for GPU accelerated computations and has more functionality. However, since Mathematica offers more appropriate graph plotting functions, it has been used to generate the plots of the <em>Gallery</em> section.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

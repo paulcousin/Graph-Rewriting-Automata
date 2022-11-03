@@ -313,16 +313,14 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementation">
-   Implementation
+  <a class="reference internal nav-link" href="#theory">
+   Theory
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
  </li>
 </ul>
 
@@ -344,16 +342,14 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementation">
-   Implementation
+  <a class="reference internal nav-link" href="#theory">
+   Theory
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
  </li>
 </ul>
 
@@ -367,6 +363,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="graphs">
 <h1>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">#</a></h1>
+<section id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">#</a></h2>
 <p>A <strong>graph</strong> <span class="math notranslate nohighlight">\(G\)</span> of order <span class="math notranslate nohighlight">\(o\)</span> will be fully described by a square <strong>adjacency matrix</strong> <span class="math notranslate nohighlight">\(\mathcal{A}\in\mathbb{M}_{o\times o}(\mathbb{R})\)</span> and a <strong>state vector</strong> <span class="math notranslate nohighlight">\(\mathcal{S}\in\mathbb{R}^{o}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[G = \{\mathcal{A}, \mathcal{S}\}\]</div>
@@ -380,34 +378,10 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \sum \limits _{v_i\in N(v_1)} w(e_{1,i})\times s(v_i) \\ \vdots \\ \sum \limits _{v_i\in N(v_o)} w(e_{o,i})\times s(v_i) \end{pmatrix}=\begin{pmatrix} \sum \limits _{i=1}^o w(e_{1,i})\times s(v_i) \\ \vdots \\ \sum \limits _{i=1}^o w(e_{o,i})\times s(v_i) \end{pmatrix}=\mathcal{A}\cdot\mathcal{S}\end{split}\]</div>
 <p>We can also define the <strong>n-th neighborhood</strong> <span class="math notranslate nohighlight">\(N_n(v)\)</span> of a vertex as the set of vertices which are at a distance <span class="math notranslate nohighlight">\(n\)</span> of <span class="math notranslate nohighlight">\(v\)</span>.</p>
-<section id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">Graph</span></code> class has the atributes:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code> ( an instance of the SparseTensor class of TensorFlow )</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state_vector</span></code> ( an instance of the Tensor class of TensorFlow )</p></li>
-</ul>
-<p>And the methods:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">.plot()</span></code>: plots the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.evolve(rule)</span></code>: evolves the graph according the <code class="docutils literal notranslate"><span class="pre">rule</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.order()</span></code>: returns the order of the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.clone()</span></code>: returns a copy of the graph</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.igraph()</span></code>: returns an igraph Graph object</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.mathematica()</span></code>: returns a string corresponding to a Mathematica compatible version of the graph</p></li>
-</ul>
-<p>It can be instantiated with:</p>
-<ul class="simple">
-<li><p>an adjacency matrix that can be either a python nested array or a tensorflow sparse tensor.</p></li>
-<li><p>a state vector that can eiher be a python nested array or a tensorflow tensor.</p></li>
-</ul>
+</section>
 <section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
-<p>The following piece of code displays a simple graph with 4 vertices with binary states:</p>
-<ul class="simple">
-<li><p>s(v)=1, called ‘alive’ and colored <span style="color:purple"><em>purple</em></span>,</p></li>
-<li><p>s(v)=0, called ‘dead’ and colored <span style="color:orange"><em>orange</em></span>.</p></li>
-</ul>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Graph</span></code> class can be instantiated with two inputs: an <strong>adjacency matrix</strong> and a <strong>state vector</strong> both in the form of nested arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gra</span>
@@ -423,13 +397,39 @@ title="Print to PDF"
         <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
         <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
     <span class="p">])</span>
-
-<span class="n">graph</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Graph</strong> objects have two atributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code> ( an instance of the SparseTensor class of TensorFlow )</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state_vector</span></code> ( an instance of the Tensor class of TensorFlow )</p></li>
+</ul>
+<p>and the methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.plot()</span></code>: plots the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.evolve(rule)</span></code>: evolves the graph according the <code class="docutils literal notranslate"><span class="pre">rule</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.order()</span></code>: returns the order of the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.diameter()</span></code>: returns the diameter of the graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.clone()</span></code>: returns a copy of the graph, this allows to use rules without modifying the original graph</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.to_igraph()</span></code>: returns an igraph object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.to_networkx()</span></code>: returns a networkx object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.to_mathematica()</span></code>: returns a string corresponding to a Mathematica compatible version of the graph</p></li>
+</ul>
+<p>In the case of binary graphs <span class="math notranslate nohighlight">\([s(v)\in \{0,1\}\;\forall v]\)</span>, plots are such that:</p>
+<ul class="simple">
+<li><p>‘alive’ vertices <span class="math notranslate nohighlight">\([s(v)=1]\)</span> are colored <span style="color:purple"><em>purple</em></span>,</p></li>
+<li><p>‘dead’ vertices <span class="math notranslate nohighlight">\([s(v)=0]\)</span> are colored <span style="color:orange"><em>orange</em></span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/graphs_2_0.svg" src="_images/graphs_2_0.svg" /></div>
+<img alt="_images/graphs_4_0.svg" src="_images/graphs_4_0.svg" /></div>
 </div>
 <p>Graphs with a different ordering of vertices are equivalent. This equivalence can be checked with <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
 <div class="cell docutils container">
@@ -454,7 +454,6 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
 </section>
 </section>
 
