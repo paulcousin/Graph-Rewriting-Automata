@@ -409,13 +409,13 @@ graph = gra.Graph([ # adjacency matrix
 </div>
 </div>
 </div>
-<p><strong>Graph</strong> objects have two atributes:</p>
+<p><strong>Graph</strong> objects have three atributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code> ( an instance of the SparseTensor class of TensorFlow )</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">state_vector</span></code> ( an instance of the Tensor class of TensorFlow )</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code> ( a numpy data type object: np.int32 or np.float32 )</p></li>
 </ul>
-<p>and the methods:</p>
+<p>and eight methods:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.plot()</span></code>: plots the graph</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.evolve(rule)</span></code>: evolves the graph according the <code class="docutils literal notranslate"><span class="pre">rule</span></code></p></li>
@@ -428,8 +428,8 @@ graph = gra.Graph([ # adjacency matrix
 </ul>
 <p>In the case of binary graphs <span class="math notranslate nohighlight">\([s(v)\in \{0,1\}\;\forall v]\)</span>, plots are such that:</p>
 <ul class="simple">
-<li><p>‘alive’ vertices <span class="math notranslate nohighlight">\([s(v)=1]\)</span> are colored <span style="color:purple"><em>purple</em></span>,</p></li>
-<li><p>‘dead’ vertices <span class="math notranslate nohighlight">\([s(v)=0]\)</span> are colored <span style="color:orange"><em>orange</em></span>.</p></li>
+<li><p>“alive” vertices <span class="math notranslate nohighlight">\([s(v)=1]\)</span> are colored <span style="color:purple"><em>purple</em></span>,</p></li>
+<li><p>“dead” vertices <span class="math notranslate nohighlight">\([s(v)=0]\)</span> are colored <span style="color:orange"><em>orange</em></span>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
