@@ -559,7 +559,7 @@ rule.plot()
 <p>We can now use this rule to evolve one of our 3-regular graphs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rule(graphs[1].clone()).plot()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rule(graphs3[1].clone()).plot()
 # or equivalently: graphs[1].clone().evolve(rule).plot()
 </pre></div>
 </div>
@@ -570,7 +570,7 @@ rule.plot()
 <p>The <code class="docutils literal notranslate"><span class="pre">.jump()</span></code> method can be used to checkout the graph obtained by applying the rule n times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>graphs[1].clone().jump(rule,120).plot()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>graphs3[1].clone().jump(rule,120).plot()
 # or equivalently: rule.jump(graphs[1].clone(),120).plot()
 </pre></div>
 </div>
