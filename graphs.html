@@ -150,6 +150,11 @@ const thebe_selector_output = ".output, .cell_output"
    References
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://orcid.org/0000-0002-3866-7615">
+   Contact
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -392,19 +397,19 @@ title="Print to PDF"
 <p>The <code class="docutils literal notranslate"><span class="pre">Graph</span></code> class can be instantiated with two inputs: an <strong>adjacency matrix</strong> and a <strong>state vector</strong> both in the form of nested arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import gra
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gra</span>
 
-graph = gra.Graph([ # adjacency matrix
-        [0, 1, 1, 1],
-        [1, 0, 1, 1],
-        [1, 1, 0, 1],
-        [1, 1, 1, 0] 
-    ],[ # state vector
-        [1],
-        [0],
-        [0],
-        [0] 
-    ])
+<span class="n">graph</span> <span class="o">=</span> <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
+    <span class="p">],[</span> <span class="c1"># state vector</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+    <span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -433,7 +438,7 @@ graph = gra.Graph([ # adjacency matrix
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>graph.plot()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -443,17 +448,17 @@ graph = gra.Graph([ # adjacency matrix
 <p>Graphs with a different ordering of vertices are equivalent. This equivalence can be checked with <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>graph == gra.Graph([ # adjacency matrix
-        [0, 1, 1, 1],
-        [1, 0, 1, 1],
-        [1, 1, 0, 1],
-        [1, 1, 1, 0] 
-    ],[ # state vector
-        [0],
-        [0],
-        [1],
-        [0] 
-    ])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graph</span> <span class="o">==</span> <span class="n">gra</span><span class="o">.</span><span class="n">Graph</span><span class="p">([</span> <span class="c1"># adjacency matrix</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> 
+    <span class="p">],[</span> <span class="c1"># state vector</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+    <span class="p">])</span>
 </pre></div>
 </div>
 </div>
